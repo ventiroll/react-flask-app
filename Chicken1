@@ -1,0 +1,27 @@
+import React from 'react';
+import './App.css';
+
+import { Routes, Route, Link } from 'react-router-dom';
+import Chicken2 from './Chicken2';
+
+function Chicken1() {
+    return (
+        <div className="App">
+      <header className="App-header">
+        <h1>- Demonstration -</h1>
+      </header>
+
+      <header className="App-body">
+        <h2>Cooking Chicken</h2>
+        <h2>Step 1: </h2>
+        <h2><Link to="Chicken2">-</Link></h2>
+        <h2>contents</h2>
+      </header>
+      <Routes>
+                    <Route path="/Chicken2/*" element={<Chicken2 />} />
+                    </Routes>
+    </div>
+    );
+}
+
+export default Chicken1;
